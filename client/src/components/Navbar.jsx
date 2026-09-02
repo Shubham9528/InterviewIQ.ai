@@ -10,6 +10,7 @@ import axios from 'axios';
 import { ServerUrl } from '../App';
 import { setUserData } from '../redux/userSlice';
 import AuthModel from './AuthModel';
+import AIButton from './ui/AIButton';
 function Navbar() {
     const {userData} = useSelector((state)=>state.user)
     const [showCreditPopup,setShowCreditPopup] = useState(false)
@@ -46,6 +47,10 @@ function Navbar() {
             </div>
 
             <div className='flex items-center gap-6  relative'>
+                <AIButton href="https://spark-cv-ai-aw2e.vercel.app/">
+                    <span className="font-semibold text-white text-xs sm:text-sm drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)] hidden sm:inline whitespace-nowrap">AI Resume Builder</span>
+                    <span className="font-semibold text-white text-xs sm:text-sm drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)] sm:hidden whitespace-nowrap">Resume AI</span>
+                </AIButton>
                 <div className='relative'>
                     <button onClick={()=>{
                         if(!userData){
