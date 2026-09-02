@@ -10,9 +10,16 @@ import interviewRouter from "./routes/interview.route.js";
 import paymentRouter from "./routes/payment.route.js";
 
 const app = express();
+
+const allowedOrigins = [
+  "https://interview-iq-ai-vert.vercel.app",
+  "http://localhost:5173",
+  "http://localhost:3000",
+];
+
 app.use(
   cors({
-    origin: "https://interview-iq-ai-vert.vercel.app",
+    origin: allowedOrigins,
     credentials: true,
   }),
 );
