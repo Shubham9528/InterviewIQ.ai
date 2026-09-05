@@ -28,6 +28,9 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
+// Health check route for keep-alive pings
+app.get("/", (req, res) => res.status(200).send("Server is alive!"));
+
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/interview", interviewRouter);
