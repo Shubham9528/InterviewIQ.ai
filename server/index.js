@@ -8,6 +8,7 @@ import authRouter from "./routes/auth.route.js";
 import userRouter from "./routes/user.route.js";
 import interviewRouter from "./routes/interview.route.js";
 import paymentRouter from "./routes/payment.route.js";
+import { startKeepAlive } from "./utils/keepAlive.js";
 
 const app = express();
 
@@ -36,4 +37,5 @@ const PORT = process.env.PORT || 6000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   connectDb();
+  startKeepAlive();
 });
