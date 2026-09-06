@@ -2,11 +2,11 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
-  authDomain: "jobwisecv.firebaseapp.com",
-  projectId: "jobwisecv",
-  storageBucket: "jobwisecv.firebasestorage.app",
-  messagingSenderId: "573705387809",
-  appId: "1:573705387809:web:e7a9e95cc85e0e0a964860",
+  authDomain: "interviewiqai-e49c5.firebaseapp.com",
+  projectId: "interviewiqai-e49c5",
+  storageBucket: "interviewiqai-e49c5.firebasestorage.app",
+  messagingSenderId: "855052975650",
+  appId: "1:855052975650:web:4e4a9c2141266b891e547b",
 };
 
 const app = initializeApp(firebaseConfig);
